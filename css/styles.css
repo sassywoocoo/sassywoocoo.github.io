@@ -542,6 +542,7 @@ progress {
 
 .display-4 {
   color: var(--bs-pink);
+
   font-size: calc(1.475rem + 2.7vw);
   font-weight: 300;
   line-height: 1.2;
@@ -2853,11 +2854,11 @@ textarea.form-control-lg {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
 .btn:disabled, .btn.disabled, fieldset:disabled .btn {
-  color: var(--bs-btn-disabled-color);
+  color: var(--bs-pink);
   pointer-events: none;
-  background-color: var(--bs-btn-disabled-bg);
-  border-color: var(--bs-btn-disabled-border-color);
-  opacity: var(--bs-btn-disabled-opacity);
+  background-color: #fff;
+  border: 0.05em solid var(--bs-pink);
+  opacity: 1;
 }
 
 .btn-primary {
@@ -4233,7 +4234,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .card:hover{
-  scale:1.1;
+  scale:1.01;
   background-color:#d63384ff;
 }
 .card {

@@ -16,12 +16,20 @@
     <script>
   $(function(){
             $("#search").click(function(){
-                let name = $("#name").val().toLowerCase(); //.replace(/</g,'').replace(/>/g,'') ;
-                let error = ''.concat("sorry. but ",name," was not found in the list :(");
+                let name = $("#name").val().toLowerCase().replace(/</g,'').replace(/>/g,'');
+                let error = '';
                 if (name == 'sassy'){
                     error = "Hey. one can't be friends with himself. hmph"
+                    $("#error").html(error);
+                    $("#error").removeClass("opacity-0");
                 }
-                if (document.getElementById(name) == null ){
+                else if (name == 'kirti'){
+                    error = "Did you mean: kirit?"
+                    $("#error").html(error);
+                    $("#error").removeClass("opacity-0");
+                }
+                else if (document.getElementById(name) == null ){
+                    error = ''.concat("sorry. but ",name," was not found in the list :(");
                     $("#error").html(error);
                     $("#error").removeClass("opacity-0");
                 } else {
@@ -36,9 +44,9 @@
                     <div class=" text-center">
                         <h1 class="display-5 my-0">Friends</h1>
                     </div>
-                    <div class="w-75 row m-5">
-                        <input class=" bg-cool text-uppercase text-primary col form-control me-2" id="name" type="search" placeholder="Who are you">
-                        <button class="col-2 btn btn-primary" id="search" type="submit">Search</button>
+                    <div class="w-100 row m-5">
+                        <input class="mx-0 bg-cool my-3 text-uppercase text-primary text-center row form-control"  id="name" type="search" placeholder="Who are you">
+                        <button class="mx-0 row btn btn-primary" id="search" type="submit">Search</button>
                     </div>
                     <div class="row">
                         <p class="col lead px-4 m-0 bg-danger rounded opacity-0" id="error">Couldn't find (name) in the list of friends</p>

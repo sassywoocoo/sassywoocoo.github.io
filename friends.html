@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>SassyWooCoo</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="SassyWooCoo" />
+    <meta name="description" content="Gaming Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    </head>
+    <script>
+  $(function(){
+            $("#search").click(function(){
+                let name = $("#name").val().toLowerCase(); //.replace(/</g,'').replace(/>/g,'') ;
+                let error = ''.concat("sorry. but ",name," was not found in the list :(");
+                if (name == 'sassy'){
+                    error = "Hey. one can't be friends with himself. hmph"
+                }
+                if (document.getElementById(name) == null ){
+                    $("#error").html(error);
+                    $("#error").removeClass("opacity-0");
+                } else {
+                    document.location.href = '#'+name;
+                }
+            });
+})
+    </script>
+    <body id="page-top">
+        <header class="masthead">
+            <div class="container-fluid px-4 px-lg-5 d-flex flex-column h-100 align-items-center justify-content-center">
+                    <div class=" text-center">
+                        <h1 class="display-5 my-0">Friends</h1>
+                    </div>
+                    <div class="w-75 row m-5">
+                        <input class=" bg-cool text-uppercase text-primary col form-control me-2" id="name" type="search" placeholder="Who are you">
+                        <button class="col-2 btn btn-primary" id="search" type="submit">Search</button>
+                    </div>
+                    <div class="row">
+                        <p class="col lead px-4 m-0 bg-danger rounded opacity-0" id="error">Couldn't find (name) in the list of friends</p>
+                    </div>
+            </div>
+
+        </header>
+        
+        <!-- Projects-->
+        <section class="projects-section bg-dark" id="projects">
+            <div class="container px-4 px-lg-5">
+                <div class="row bg-primary rounded-3 py-2 my-4" id="kirit">
+                    <img src="https://braverplayers.org/wp-content/uploads/2022/09/braver-blank-pfp.jpg" class="col-1 w-25 rounded-circle">
+                    <div class="col-8">
+                        <h5 class="display-4 text-white">Kirit</h5>
+                        <p class="lead text-white">"lalalalalalalala"</p>
+                    </div>
+                </div>
+                <div class="row bg-primary rounded-3 py-2 my-4" id="bob">
+                    <img src="https://braverplayers.org/wp-content/uploads/2022/09/braver-blank-pfp.jpg" class="col-1 w-25 rounded-circle">
+                    <div class="col-8">
+                        <h5 class="display-4 text-white">Bob</h5>
+                        <p class="lead text-white">"okokokokokokokokok"</p>
+                    </div>
+                </div>
+        </section>
+
+    <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; SassyWooCoo 2024</div></footer>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
